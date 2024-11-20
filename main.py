@@ -25,7 +25,7 @@ def bisect(inp, out, i):
 inp = [x1, x2]
 out = [f(inp[0]), f(inp[1])]
 
-for i in range(1, n_iterations):
+for i in range(n_iterations):
     old_inp = bisect(inp, out, i)
     current_inp = inp[i]
 
