@@ -1,5 +1,11 @@
 import numpy as np
 
+# starting interval
+x1 = 0.0
+x2 = 1.0
+
+n_iterations = 100
+
 def f(x):
     return np.exp(-x)
 
@@ -16,12 +22,10 @@ def bisect(inp, out, i):
 
     return 0
 
-n = 100
-
-inp = [0.0, 1.0]
+inp = [x1, x2]
 out = [f(inp[0]), f(inp[1])]
 
-for i in range(1, n):
+for i in range(1, n_iterations):
     old_inp = bisect(inp, out, i)
     current_inp = inp[i]
 
